@@ -16,9 +16,9 @@ def printRows():
         num += 1
         print str(num) + " " + ', '.join(str(v) for v in row)
 
-def parseData(data, filename):
+def parseData(data, filename, step):
     # 2017년도 도자 라벨
-    if filename == "2017_조사광산개요.csv":
+    if step == 1 and filename == "2017_조사광산개요.csv":
         i, j = (0, 0)
         for row in data:
             j = 0
@@ -30,7 +30,7 @@ def parseData(data, filename):
             i += 1
 
     # 2016년도 고령토 라벨
-    if filename == "2016_분석성분.csv":
+    if step == 2 and filename == "2016_분석성분.csv":
         i, j = (0, 0)
         for row in data:
             j = 0
@@ -45,7 +45,7 @@ def parseData(data, filename):
             i += 1
 
     # 2017년도 성분분석(정제전, 정제후), 2016년 분석성분 자료
-    if filename == "2017_성분분석_정제전.csv" or filename == "2017_성분분석_정제후.csv" or filename == "2016_분석성분.csv":
+    if step == 3 and (filename == "2017_성분분석_정제전.csv" or filename == "2017_성분분석_정제후.csv" or filename == "2016_분석성분.csv"):
         i, j = (0, 0)
 
         lo_prefix = 'element'
@@ -93,8 +93,7 @@ def parseData(data, filename):
             i += 1
 
     # 2016년도 입도, 2017년도 입도
-    if filename == "2017_시료입도_크기.csv" or filename == "2016_시료입도_크기.csv":
-        return
+    if step == 4 and (filename == "2017_시료입도_크기.csv" or filename == "2016_시료입도_크기.csv"):
         i, j = (0, 0)
 
         lo_prefix = 'mean'
@@ -108,6 +107,10 @@ def parseData(data, filename):
                         lo_id = gl_labels.index(el_name) + 1
                         lo_name = lo_labels[j]
                         lo_key = lo_prefix + '.' + lo_name.lower()
+                        
+                        if lo_key == "mean.meansize":
+                            lo_key = "mean.size"
+
                         lo_cond = 'eq'
                         lo_value = str(col)
                         gl_rows.append([lo_prefix, lo_id, lo_labels[j], lo_key, lo_name, lo_cond, lo_value])
@@ -125,9 +128,8 @@ def parseData(data, filename):
 def parseLine(line):
     return line.replace('\n', '').split(',')
 
-def parseFile(filename):
-    data = []    
-    print(filename)
+def parseFile(filename, step):
+    data = []
 
     filepath = os.path.join(gl_directory, filename)
     with open(filepath) as fp:  
@@ -136,15 +138,19 @@ def parseFile(filename):
            data.append(parseLine(line))
            line = fp.readline()
 
-    parseData(data, filename)
+    parseData(data, filename, step)
 
 def do():
-    for filename in os.listdir(gl_directory):
-        if filename.endswith(".csv"): 
-            parseFile(filename)
+    for i in range(1, 10):
+        for filename in os.listdir(gl_directory):
+            if filename.endswith(".csv"): 
+                parseFile(filename, i)
 
     printLabels()
     printRows()
+
+def set_gl_step(step):
+    gl_step = step
 
 def main(args):
     do();
@@ -160,5 +166,6 @@ if __name__ == '__main__':
     # set global_data
     gl_rows = []
     gl_labels = []
+    gl_step = 0
 
     sys.exit(main(sys.argv))
