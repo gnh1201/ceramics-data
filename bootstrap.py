@@ -107,9 +107,6 @@ def parseData(data, filename, step):
                         lo_id = gl_labels.index(el_name) + 1
                         lo_name = lo_labels[j]
                         lo_key = lo_prefix + '.' + lo_name.lower()
-                        
-                        if lo_key == "mean.meansize":
-                            lo_key = "mean.size"
 
                         lo_cond = 'eq'
                         lo_value = str(col)
@@ -117,11 +114,59 @@ def parseData(data, filename, step):
                     else:
                         el_name = col.replace(' ', '').replace(')', '').replace('(', '').replace('급', '').strip()
                 else:
-                    lo_labels.append(col.replace(' ', '').replace('(㎛)', ''))
+                    lo_labels.append(col.replace(' ', '').replace('(㎛)', '').strip())
 
                 # up to 1
                 j += 1
 
+            # up to 1
+            i += 1
+
+    # 2016년 색도, 2017년 색도
+    if step == 5 and (filename == "2016_색도_편집본.csv" or filename == "2017_색도_편집본.csv"):
+        i, j = (0, 0)
+
+        lo_prefix = 'color'
+        lo_labels = []
+        lo_name = ''
+        for row in data:
+            j = 0
+            for col in row:
+                lo_id = 0
+
+                if i > 0:
+                    lo_row = []
+                    if j > 0:
+                        lo_value = str(col)
+                        lo_cond = 'eq'
+                        
+                        print lo_labels[j]
+                        
+                        lo_id = gl_labels.index(lo_labels[j]) + 1
+                        
+                        if lo_value.startswith('<'):
+                            lo_cond = 'lt'
+                            lo_value = lo_value[1:]
+                            
+                        if lo_value == '-' or lo_value == '':
+                            lo_value = "0.00"
+
+                        lo_key = lo_prefix + '.' + lo_name.lower().replace('*', '')
+
+                        gl_rows.append([lo_prefix, lo_id, lo_labels[j], lo_key, lo_name, lo_cond, lo_value])
+                    else:
+                        lo_name = col
+
+                else:
+                    if j > 0:
+                        el_name = col.replace(' ', '').replace(')', '').replace('(', '').replace('급', '').strip()
+                    else:
+                        el_name = ''
+                    lo_labels.append(el_name)
+
+                # up to 1
+                j += 1
+                
             # up to 1
             i += 1
 
