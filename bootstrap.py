@@ -140,8 +140,6 @@ def parseData(data, filename, step):
                         lo_value = str(col)
                         lo_cond = 'eq'
                         
-                        print lo_labels[j]
-                        
                         lo_id = gl_labels.index(lo_labels[j]) + 1
                         
                         if lo_value.startswith('<'):
