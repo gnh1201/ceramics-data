@@ -113,10 +113,8 @@ cspt(
                     Loss(Condition, Value)
                 ),
                 Color(
-                    Temperture, (
-                        L*,
-                        a*,
-                        b*
+                    (
+                        Temperture, (L*, a*, b*)
                     )
                 ),
                 Mean(
