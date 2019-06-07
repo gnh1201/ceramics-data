@@ -94,10 +94,10 @@ cspt(
                 ),
                 Color(
                     Oxidation(
-                        (Temperture, (L, a, b), ~Casting)
+                        (Temperture, Cie(L, a, b), ~Casting)
                     ),
                     Reduction(
-                        (Temperture, (L, a, b), ~Casting)
+                        (Temperture, Cie(L, a, b), ~Casting)
                     )
                 ),
                 Absorption(
