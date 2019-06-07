@@ -47,6 +47,7 @@ cspt(
                 ('=', 0.05),                         // 성분 KM-85 MgO
                 ('=', 1.13),                         // 성분 KM-85 K2O
                 ('=', 0.44),                         // 성분 KM-85 Na2O
+                ('=', 0.02),                         // 성분 KM-85 TiO2
                 ('=', 0.03),                         // 성분 KM-85 MnO
                 ('=', 0.04),                         // 성분 KM-85 P2O5
                 ('<', 0.01),                         // 성분 KM-85 ZrO2
@@ -136,6 +137,7 @@ cspt(
                     CaO(Condition, Value),
                     MgO(Condition, Value),
                     Na2O(Condition, Value),
+                    TiO2(Condition, Value),
                     MnO(Condition, Value),
                     P2O5(Condition, Value),
                     ZrO2(Condition, Value),
