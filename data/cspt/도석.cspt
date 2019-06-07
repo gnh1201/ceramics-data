@@ -48,6 +48,11 @@ cspt(
                 ('<', 0.01),
                 ('<', 0.01),
                 ('=', 3.53)
+            ),
+            (
+                (
+                    
+                )
             )
         )
     )
@@ -93,6 +98,11 @@ cspt(
                     Loss(Condition, Value)
                 ),
                 Color(
+                    Acid(
+                        Before(Cie(L, a, b)),
+                        After(Cie(L, a, b)),
+                        ~Casting
+                    ),
                     Oxidation(
                         (Temperture, Cie(L, a, b), ~Casting)
                     ),
