@@ -3,11 +3,15 @@ cspt(
         (
             'KM-85'                                  // 도자 이름
         ),
-        (
-            '고령토', '베트남', '푸토성', '건식성형'      // 태그 (연관 단어)
+        (                                            // 연관 단어
+            '고령토',
+            '베트남',
+            '푸토성',
+            '건식',
+            '건식성형'
         ),
-        (
-            (                                        // 분석 방법
+        (                                            // 분석 방법
+            (
                 (
                     'XRF-ICP',                       // XRF-ICP 측정법
                     (
@@ -144,10 +148,10 @@ cspt(
                 ),
                 Color(
                     Oxidation(
-                        (Temperture, (L, a, b))
+                        (Temperture, (L, a, b), ~Mold)
                     ),
                     Reduction(
-                        (Temperture, (L, a, b))
+                        (Temperture, (L, a, b), ~Mold)
                     )
                 ),
                 Absorption(
