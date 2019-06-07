@@ -114,10 +114,22 @@ cspt(
                 ),
                 Color(
                     Oxidation(
-                        (Temperture, (L*, a*, b*))
+                        (
+                            Temperture, (
+                                L*,
+                                a*,
+                                b*
+                            )
+                        )
                     ),
                     Reduction(
-                        (Temperture, (L*, a*, b*))
+                        (
+                            Temperture, (
+                                L*,
+                                a*,
+                                b*
+                            )
+                        )
                     )
                 ),
                 Mean(
