@@ -96,17 +96,17 @@ cspt(
                 ('=', 16.76)                         // 입도 KM-85 D90
             ),
             (                                        // 함유량 KM-85 (wt.%)
-                ('=', 2.3),                          // 함유량 KM-85 Quartz
-                ('=', 82.2),                         // 함유량 KM-85 Kaolinite
-                ('=', 6.1),                          // 함유량 KM-85 Muscovite
-                ('=', 0.8),                          // 함유량 KM-85 Andesine
-                ('=', 0.0),                          // 함유량 KM-85 Gibbsite
-                ('=', 1.3),                          // 함유량 KM-85 Rutile
-                ('=', 7.3),                          // 함유량 KM-85 Halloysite
-                ('=', 13.8),                         // 함유량 KM-85 Rp
-                ('=', 18.0),                         // 함유량 KM-85 Rwp
-                ('=', 7.67),                         // 함유량 KM-85 Rexp
-                ('=', 5.49)                          // 함유량 KM-85 X2
+                ('=', 2.3, 2),                       // 함유량 KM-85 Quartz
+                ('=', 82.2, 14),                     // 함유량 KM-85 Kaolinite
+                ('=', 6.1, 6),                       // 함유량 KM-85 Muscovite
+                ('=', 0.8, 1),                       // 함유량 KM-85 Andesine
+                ('=', 0.0, 0),                       // 함유량 KM-85 Gibbsite
+                ('=', 1.3, 1),                       // 함유량 KM-85 Rutile
+                ('=', 7.3, 2,                        // 함유량 KM-85 Halloysite
+                ('=', 13.8, 0),                      // 함유량 KM-85 Rp
+                ('=', 18.0, 0),                      // 함유량 KM-85 Rwp
+                ('=', 7.67, 0),                      // 함유량 KM-85 Rexp
+                ('=', 5.49, 0)                       // 함유량 KM-85 X2
             )
         )
     )
@@ -181,26 +181,18 @@ cspt(
                     D90(Condition, Value)
                 ),
                 Content(
-                    Quartz(Condition, Value),
-                    Kaolinite(Condition, Value),
-                    Muscovite(Condition, Value),
-                    Andesine(Condition, Value),
-                    Gibbsite(Condition, Value)
-                    Rutile(Condition, Value),
-                    Halloysite(Condition, Value),
-                    Rp(Condition, Value),
-                    Rwp(Condition, Value),
-                    Rexp(Condition, Value),
-                    X2(Condition, Value)
+                    Quartz(Condition, Value, Subsequent),
+                    Kaolinite(Condition, Value, Subsequent),
+                    Muscovite(Condition, Value, Subsequent),
+                    Andesine(Condition, Value, Subsequent),
+                    Gibbsite(Condition, Value, Subsequent)
+                    Rutile(Condition, Value, Subsequent),
+                    Halloysite(Condition, Value, Subsequent),
+                    Rp(Condition, Value, Subsequent),
+                    Rwp(Condition, Value, Subsequent),
+                    Rexp(Condition, Value, Subsequent),
+                    X2(Condition, Value, Subsequent)
                 ),
-                ContentRate(
-                    Quartz(Condition, Value),
-                    Kaolinite(Condition, Value),
-                    Andesine(Condition, Value),
-                    Gibbsite(Condition, Value)
-                    Rutile(Condition, Value),
-                    Halloysite(Condition, Value)
-                )
             )
         )
     )
