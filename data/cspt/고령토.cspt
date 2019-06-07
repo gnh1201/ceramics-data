@@ -151,26 +151,26 @@ cspt(
                 ),
                 Color(
                     Oxidation(
-                        (Temperture, (L, a, b), ~Mold)
+                        (Temperture, (L, a, b), ~Casting)
                     ),
                     Reduction(
-                        (Temperture, (L, a, b), ~Mold)
+                        (Temperture, (L, a, b), ~Casting)
                     )
                 ),
                 Absorption(
                     Oxidation(
-                        (Temperture, Value, ~Mold)
+                        (Temperture, Value, ~Casting)
                     ),
                     Reduction(
-                        (Temperture, Value, ~Mold)
+                        (Temperture, Value, ~Casting)
                     )
                 ),
                 Shinkage(
                     Oxidation(
-                        (Temperture, Value, ~Mold)
+                        (Temperture, Value, ~Casting)
                     ),
                     Reduction(
-                        (Temperture, Value, ~Mold)
+                        (Temperture, Value, ~Casting)
                     )
                 ),
                 GrainSize(
