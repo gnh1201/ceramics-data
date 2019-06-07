@@ -159,18 +159,18 @@ cspt(
                 ),
                 Absorption(
                     Oxidation(
-                        (Temperture, Value)
+                        (Temperture, Value, ~Mold)
                     ),
                     Reduction(
-                        (Temperture, Value)
+                        (Temperture, Value, ~Mold)
                     )
                 ),
                 Shinkage(
                     Oxidation(
-                        (Temperture, Value)
+                        (Temperture, Value, ~Mold)
                     ),
                     Reduction(
-                        (Temperture, Value)
+                        (Temperture, Value, ~Mold)
                     )
                 ),
                 GrainSize(
