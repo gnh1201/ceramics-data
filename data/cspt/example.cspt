@@ -1,0 +1,199 @@
+cspt(
+    (
+        (
+            'KM-85'                                  // 도자 이름
+        ),
+        (
+            '고령토'                                  // 도자 유형
+        ),
+        (
+            '베트남', '푸토성'                         // 광산 위치
+        ),
+        (
+            '건식성형'                                // 성형 방법
+        ),
+        (
+            (                                        // 분석 방법
+                (
+                    'XRF-ICP',                       // XRF-ICP 측정법
+                    (
+                        ('=', 47.6),                 // XRF-ICP 측정 KM-85 SiO2
+                        ('=', 36.8),                 // XRF-ICP 측정 KM-85 Al2O3
+                        ('=', 0.39),                 // XRF-ICP 측정 KM-85 Fe2O3
+                        ('=', 0.02),                 // XRF-ICP 측정 KM-85 TiO2
+                        ('=', 0.07),                 // XRF-ICP 측정 KM-85 CaO
+                        ('=', 0.44),                 // XRF-ICP 측정 KM-85 Na2O
+                        ('=', 1.13),                 // XRF-ICP 측정 KM-85 K2O
+                        ('=', 13.3)                  // XRF-ICP 측정 KM-85 감열감량
+                    )
+                ),
+                (
+                    'Rietveld',                      // Rietveld 측정법
+                    (
+                        ('=', 54.7),                 // Rietveld 측정 KM-85 SiO2
+                        ('=', 43.3),                 // Rietveld 측정 KM-85 Al2O3
+                        ('=', 0),                    // Rietveld 측정 KM-85 Fe2O3
+                        ('=', 0.4),                  // Rietveld 측정 KM-85 TiO2
+                        ('=', 0.1),                  // Rietveld 측정 KM-85 CaO
+                        ('<', 0.01),                 // Rietveld 측정 KM-85 Na2O
+                        ('=', 1.4),                  // Rietveld 측정 KM-85 K2O
+                        ('=', 13.3)                  // Rietveld 측정 KM-85 감열감량
+                    )
+                )
+            ),
+            (                                        // 성분
+                ('=', 47.6),                         // 성분 KM-85 SiO2
+                ('=', 36.8),                         // 성분 KM-85 Al2O3
+                ('=', 0.39),                         // 성분 KM-85 Fe2O3
+                ('=', 0.07),                         // 성분 KM-85 CaO
+                ('=', 0.05),                         // 성분 KM-85 MgO
+                ('=', 1.13),                         // 성분 KM-85 K2O
+                ('=', 0.44),                         // 성분 KM-85 Na2O
+                ('=', 0.03),                         // 성분 KM-85 MnO
+                ('=', 0.04),                         // 성분 KM-85 P2O5
+                ('<', 0.01),                         // 성분 KM-85 ZrO2
+                ('<', 0.01),                         // 성분 KM-85 Li2O
+                ('<', 0.01),                         // 성분 KM-85 SrO
+                ('=', 0.01),                         // 성분 KM-85 ZnO
+                ('<', 0.01),                         // 성분 KM-85 Cr2O3
+                ('=', 0.01),                         // 성분 KM-85 BaO
+                ('=', 13.3)                          // 성분 KM-85 감열감량
+            ),
+            (                                        // 색도 KM-85
+                (
+                    (1200, (94.86, 1.21, 2,87)),     // 색도 KM-85 산화소성 1200도 (L*, a*, b*)
+                    (1250, (94.86, 0.82, 3.03))      // 색도 KM-85 산화소성 1250도 (L*, a*, b*)
+                ),
+                (
+                    (1200, (95.89, 0.32, 3.91)),     // 색도 KM-85 환원소성 1200도 (L*, a*, b*)
+                    (1250, (95.67, 0.28, 4,56))      // 색도 KM-85 환원소성 1250도 (L*, a*, b*)
+                )
+            ),
+            (
+                (
+                    (1200, 15.64),                   // 소지화 후 산화분위기 1200도 흡수율
+                    (1250, 10.76),                   // 소지화 후 산화분위기 1250도 흡수율
+                ),
+                (
+                    (1200, None),                    // 소지화 후 환원분위기 1200도 흡수율 (데이터 없음)
+                    (1250, None),                    // 소지화 후 환원분위기 1250도 흡수율 (데이터 없음)
+                )
+            ),
+            (
+                (
+                    (1200, 8.3),                     // 소지화 후 산화분위기 1200도 수축율
+                    (1250, 10.5)                     // 소지화 후 산화분위기 1250도 수축율
+                ),
+                (
+                    (1200, None),                    // 소지화 후 환원분위기 1200도 수축율 (데이터 없음)
+                    (1250, None)                     // 소지화 후 환원분위기 1250도 수축율 (데이터 없음)
+                )
+            ),
+            (                                        // 입도 KM-85
+                ('=', 9.58),                         // 입도 KM-85 Size(MeanSize)
+                ('=', 3.43),                         // 입도 KM-85 D10
+                ('=', 8.56),                         // 입도 KM-85 D50
+                ('=', 16.76)                         // 입도 KM-85 D90
+            ),
+            (                                        // 함유량 KM-85 (wt.%)
+                ('=', 2.3, 2),                       // 함유량 KM-85 Quartz
+                ('=', 82.2, 14),                     // 함유량 KM-85 Kaolinite
+                ('=', 6.1, 6),                       // 함유량 KM-85 Muscovite
+                ('=', 0.8, 1),                       // 함유량 KM-85 Andesine
+                ('=', 0.0, 0),                       // 함유량 KM-85 Gibbsite
+                ('=', 1.3, 1),                       // 함유량 KM-85 Rutile
+                ('=', 7.3, 2),                       // 함유량 KM-85 Halloysite
+                ('=', 13.8, 0),                      // 함유량 KM-85 Rp
+                ('=', 18.0, 0),                      // 함유량 KM-85 Rwp
+                ('=', 7.67, 0),                      // 함유량 KM-85 Rexp
+                ('=', 5.49, 0)                       // 함유량 KM-85 X2
+            )
+        )
+    )
+)<=(
+    (
+        Material(
+            Name(),
+            Category(),
+            Origin(),
+            Mold(),
+            Data(
+                Analysis(
+                    (
+                        Method,
+                        Element(
+                            SiO2(Condition, Value),
+                            Al2O3(Condition, Value),
+                            Fe2O3(Condition, Value),
+                            TiO2(Condition, Value),
+                            CaO(Condition, Value),
+                            Na2O(Condition, Value),
+                            K2O(Condition, Value),
+                            Loss(Condition, Value)
+                        )
+                    )
+                ),
+                Element(
+                    SiO2(Condition, Value),
+                    Al2O3(Condition, Value),
+                    Fe2O3(Condition, Value),
+                    CaO(Condition, Value),
+                    MgO(Condition, Value),
+                    Na2O(Condition, Value),
+                    MnO(Condition, Value),
+                    P2O5(Condition, Value),
+                    ZrO2(Condition, Value),
+                    Li2O(Condition, Value),
+                    SrO(Condition, Value),
+                    ZnO(Condition, Value),
+                    Cr2O3(Condition, Value),
+                    BaO(Condition, Value),
+                    Loss(Condition, Value)
+                ),
+                Color(
+                    Oxidation(
+                        (Temperture, (L, a, b))
+                    ),
+                    Reduction(
+                        (Temperture, (L, a, b))
+                    )
+                ),
+                Absorption(
+                    Oxidation(
+                        (Temperture, Value)
+                    ),
+                    Reduction(
+                        (Temperture, Value)
+                    )
+                ),
+                Shinkage(
+                    Oxidation(
+                        (Temperture, Value)
+                    ),
+                    Reduction(
+                        (Temperture, Value)
+                    )
+                ),
+                Mean(
+                    Size(Condition, Value),
+                    D10(Condition, Value),
+                    D50(Condition, Value),
+                    D90(Condition, Value)
+                ),
+                Content(
+                    Quartz(Condition, Value, Subsequent),
+                    Kaolinite(Condition, Value, Subsequent),
+                    Muscovite(Condition, Value, Subsequent),
+                    Andesine(Condition, Value, Subsequent),
+                    Gibbsite(Condition, Value, Subsequent)
+                    Rutile(Condition, Value, Subsequent),
+                    Halloysite(Condition, Value, Subsequent),
+                    Rp(Condition, Value, Subsequent),
+                    Rwp(Condition, Value, Subsequent),
+                    Rexp(Condition, Value, Subsequent),
+                    X2(Condition, Value, Subsequent)
+                )
+            )
+        )
+    )
+)
