@@ -83,16 +83,18 @@ cspt(
             Origin(),
             Data(
                 Analysis(
-                    Method,
-                    Element(
-                        SiO2(Condition, Value),
-                        Al2O3(Condition, Value),
-                        Fe2O3(Condition, Value),
-                        TiO2(Condition, Value),
-                        CaO(Condition, Value),
-                        Na2O(Condition, Value),
-                        K2O(Condition, Value),
-                        Loss(Condition, Value)
+                    (
+                        Method,
+                        Element(
+                            SiO2(Condition, Value),
+                            Al2O3(Condition, Value),
+                            Fe2O3(Condition, Value),
+                            TiO2(Condition, Value),
+                            CaO(Condition, Value),
+                            Na2O(Condition, Value),
+                            K2O(Condition, Value),
+                            Loss(Condition, Value)
+                        )
                     )
                 ),
                 Element(
