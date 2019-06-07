@@ -174,8 +174,8 @@ cspt(
                         (Temperture, Value)
                     )
                 ),
-                Mean(
-                    Size(Condition, Value),
+                GrainSize(
+                    MeanSize(Condition, Value),
                     D10(Condition, Value),
                     D50(Condition, Value),
                     D90(Condition, Value)
