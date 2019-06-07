@@ -24,11 +24,11 @@ cspt(
                     ('=', 0.3)                       // 주입성형 PVA(%)
                 ),
                 (                                    // 소지성형 (Body-casting)
-                    ('=', 630),
-                    ('=', 270),
-                    ('=', 1000),
-                    ('=', 3),
-                    ('=', 0.3)
+                    ('=', 630),                      // 소지성형 도석(g)
+                    ('=', 270),                      // 소지성형 카올린(g)
+                    ('=', 1000),                     // 소지성형 H20(g)
+                    ('=', 3),                        // 주입성형 CMC(%)
+                    ('=', 0.3)                       // 주입성형 PVA(%)
                 )
             )
         )
@@ -52,7 +52,6 @@ cspt(
                         Stone(Condition, Value),
                         Kaolin(Condition, Value),
                         H2O(Condidion, Value),
-                        CF44(Condition, Value),
                         CMC(Condition, Value),
                         PVA(Condition, Value)
                     )
