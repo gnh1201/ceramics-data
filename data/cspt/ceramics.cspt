@@ -10,6 +10,9 @@ cspt(
             '베트남', '푸토성'                         // 광산 위치
         ),
         (
+            '건식성형'                                // 성형 방법
+        ),
+        (
             (                                        // 분석 방법
                 (
                     'XRF-ICP',                       // XRF-ICP 측정법
@@ -101,6 +104,7 @@ cspt(
             Name(),
             Category(),
             Origin(),
+            Mold(),
             Data(
                 Analysis(
                     (
