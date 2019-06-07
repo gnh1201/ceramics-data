@@ -89,7 +89,7 @@ cspt(
             Name(),
             Tag(),
             Data(
-                Composite(
+                Composition(
                     Slipcasting(
                         Stone(Condition, Value),
                         Kaolin(Condition, Value),
