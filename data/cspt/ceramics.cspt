@@ -126,6 +126,30 @@ cspt(
                         )
                     )
                 ),
+                Absorption(
+                    Oxidation(
+                        (
+                            Temperture, Value
+                        )
+                    ),
+                    Reduction(
+                        (
+                            Temperture, Value
+                        )
+                    )
+                ),
+                ShinkageRate(
+                    Oxidation(
+                        (
+                            Temperture, Value
+                        )
+                    ),
+                    Reduction(
+                        (
+                            Temperture, Value
+                        )
+                    )
+                ),
                 Mean(
                     Size,
                     D10,
