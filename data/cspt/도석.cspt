@@ -15,6 +15,7 @@ cspt(
             'XRF'
         ),
         (                                            // 자료
+            None,
             (                                        // 조성
                 (                                    // 주입성형 (Slip-casting)
                     ('=', 455),                      // 주입성형 도석(g)
@@ -101,7 +102,8 @@ cspt(
                 ('=', 1.9),
                 ('=', 7.3),
                 ('=', 13.9)
-            )
+            ),
+            None
         )
     )
 )<=(
@@ -110,6 +112,21 @@ cspt(
             Name(),
             Tag(),
             Data(
+                Analysis(
+                    (
+                        Method,
+                        Element(
+                            SiO2(Condition, Value),
+                            Al2O3(Condition, Value),
+                            Fe2O3(Condition, Value),
+                            TiO2(Condition, Value),
+                            CaO(Condition, Value),
+                            Na2O(Condition, Value),
+                            K2O(Condition, Value),
+                            Loss(Condition, Value)
+                        )
+                    )
+                ),
                 Composition(
                     Slipcasting(
                         Stone(Condition, Value),
@@ -179,6 +196,19 @@ cspt(
                     D10(Condition, Value),
                     D50(Condition, Value),
                     D90(Condition, Value)
+                ),
+                Content(
+                    Quartz(Condition, Value, ~Subsequent),
+                    Kaolinite(Condition, Value, ~Subsequent),
+                    Muscovite(Condition, Value, ~Subsequent),
+                    Andesine(Condition, Value, ~Subsequent),
+                    Gibbsite(Condition, Value, ~Subsequent)
+                    Rutile(Condition, Value, ~Subsequent),
+                    Halloysite(Condition, Value, ~Subsequent),
+                    Rp(Condition, Value, ~Subsequent),
+                    Rwp(Condition, Value, ~Subsequent),
+                    Rexp(Condition, Value, ~Subsequent),
+                    X2(Condition, Value, ~Subsequent)
                 )
             )
         )
