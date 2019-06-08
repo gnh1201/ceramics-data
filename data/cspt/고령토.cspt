@@ -10,6 +10,11 @@ cspt(
             '성형',
             '건식',
             '소지'
+            'XRF',
+            'ICP',
+            'Rietveld',
+            'MINITAB'
+            'Slipcasting'
         ),
         (                                            // 분석 방법
             (
