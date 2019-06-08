@@ -11,15 +11,13 @@ cspt(
             '건식',
             '소지'
             'XRF',
-            'ICP',
             'Rietveld',
             'MINITAB'
-            'Slipcasting'
         ),
         (                                            // 분석 방법
             (
                 (
-                    'XRF-ICP',                       // XRF-ICP 측정법
+                    'XRF',                           // XRF-ICP 측정법
                     (
                         ('=', 47.6),                 // XRF-ICP 측정 KM-85 SiO2
                         ('=', 36.8),                 // XRF-ICP 측정 KM-85 Al2O3
