@@ -63,6 +63,7 @@ cspt(
                 ('=', 13.3)                          // 성분 KM-85 감열감량
             ),
             (                                        // 색도 KM-85
+                None,                                // 색도 KM-85 산처리 (해당없음)
                 (
                     (1200, (94.86, 1.21, 2,87)),     // 색도 KM-85 산화소성 1200도 (L*, a*, b*)
                     (1250, (94.86, 0.82, 3.03))      // 색도 KM-85 산화소성 1250도 (L*, a*, b*)
@@ -153,6 +154,11 @@ cspt(
                     Loss(Condition, Value)
                 ),
                 Color(
+                    Acid(
+                        CieBefore(L, a, b),
+                        CieAfter(L, a, b),
+                        ~Casting
+                    ),
                     Oxidation(
                         (Temperture, Cie(L, a, b), ~Casting)
                     ),
