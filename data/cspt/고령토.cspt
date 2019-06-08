@@ -135,6 +135,23 @@ cspt(
                         )
                     )
                 ),
+                Composition(
+                    Slipcasting(
+                        Stone(Condition, Value),
+                        Kaolin(Condition, Value),
+                        H2O(Condidion, Value),
+                        CF44(Condition, Value),
+                        CMC(Condition, Value),
+                        PVA(Condition, Value)
+                    ),
+                    Bodycasting(
+                        Stone(Condition, Value),
+                        Kaolin(Condition, Value),
+                        H2O(Condidion, Value),
+                        CMC(Condition, Value),
+                        PVA(Condition, Value)
+                    )
+                ),
                 Element(
                     SiO2(Condition, Value),
                     Al2O3(Condition, Value),
