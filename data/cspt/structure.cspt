@@ -55,8 +55,12 @@
             ),
             Color(
                 Acid(
-                    CieBefore(L, a, b),
-                    CieAfter(L, a, b),
+                    Before(
+                        Cie(L, a, b)
+                    ),
+                    After(
+                        Cie(L, a, b)
+                    ),
                     ~Casting
                 ),
                 Oxidation(
