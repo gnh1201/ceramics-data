@@ -22,7 +22,7 @@ Material(
                 Slipcasting(
                     Stone(Condition, Value),
                     Kaolin(Condition, Value),
-                    H2O(Condidion, Value),
+                    H2O(Condition, Value),
                     CF44(Condition, Value),
                     CMC(Condition, Value),
                     PVA(Condition, Value)
@@ -30,7 +30,7 @@ Material(
                 Bodycasting(
                     Stone(Condition, Value),
                     Kaolin(Condition, Value),
-                    H2O(Condidion, Value),
+                    H2O(Condition, Value),
                     CMC(Condition, Value),
                     PVA(Condition, Value)
                 )
