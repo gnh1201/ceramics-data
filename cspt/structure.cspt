@@ -22,16 +22,17 @@ Material(
                 Stone(Condition, Value),
                 Kaolin(Condition, Value),
                 H2O(Condidion, Value),
-                CF44(Condition, Value),
                 CMC(Condition, Value),
-                PVA(Condition, Value)
+                PVA(Condition, Value),
+                CF44(Condition, Value)
             ),
             Bodycasting(
                 Stone(Condition, Value),
                 Kaolin(Condition, Value),
                 H2O(Condidion, Value),
                 CMC(Condition, Value),
-                PVA(Condition, Value)
+                PVA(Condition, Value),
+                CF44(Condition, Value)
             )
         ),
         Element(
@@ -77,7 +78,7 @@ Material(
                 (Temperture, Value, ~Casting)
             )
         ),
-        Shinkage(
+        Contraction(
             Oxidation(
                 (Temperture, Value, ~Casting)
             ),
